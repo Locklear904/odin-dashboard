@@ -19,6 +19,15 @@ h3 {
     font-size: 1.9rem;
 }
 
+h4 {
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
 .container {
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 4fr;
@@ -147,6 +156,7 @@ h3 {
 }
 
 .header-topright h3 {
+    margin: 0;
     grid-column: 4 / 5;
 }
 
@@ -187,10 +197,56 @@ h3 {
 .main {
     background-color: #e7e6e6;
     display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.main h3 {
+    grid-row: 1 / 2;
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
+.main-articles {
+    grid-column: 1 / 2;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: max-content;
+    gap: 20px;
+}
+
+.main-side {
+    grid-column: 2 / 3;
+    margin: 10px;
 }
 
 article {
     background-color: white;
+    border-radius: 7px;
+    border-left: 8px goldenrod solid;
+    padding: 25px 15px;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+}
+
+.article-top {
+    grid-row: 1 / 2;
+}
+
+article p {
+    color: gray;
+    margin-top: 5px;
+}
+
+.article-icon-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-row: 2 / 3;
+    justify-content: end;
+    align-items: end;
+    gap: 35px;
 }
 
 .small-icon {
@@ -205,8 +261,8 @@ article {
 }
 
 .prof-pic-small {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
 }
 
